@@ -3,7 +3,7 @@
 Please fork and clone this repository. Remember to fork before you clone. MAKE COMMITS AS YOU WORK!
 
 ## Wave 0: Understand
-Take a bit of time to read through BudgetApp.java and sampleSpending.txt. Discuss with your partner what it's doing and make a predicition of what the output will be when you run it. Then run the below command (make sure you are in the budget-tracker directory):
+Take a bit of time to read through BudgetApp.java and sampleSpending.txt. Make a prediction of what the output will be when you run it. Then run the below command (make sure you are in the budget-tracker directory):
 
 ```
 javac src/*.java && java -cp src BudgetApp < sampleSpending.txt
