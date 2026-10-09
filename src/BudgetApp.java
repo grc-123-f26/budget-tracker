@@ -4,21 +4,23 @@ import java.util.Scanner;
 public class BudgetApp {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        BudgetCategory rent = new BudgetCategory("Rent", 2050.00, 2050.00);
+        System.out.print(rent);
 
-        while(scan.hasNextLine()) {
-            String category = scan.nextLine();
+        // while(scan.hasNextLine()) {
+        //     String category = scan.nextLine();
 
-            double limit = scan.nextDouble();
-            double spent = scan.nextDouble();
+        //     double limit = scan.nextDouble();
+        //     double spent = scan.nextDouble();
 
-            // Consume \n after spent input 
-            if(scan.hasNextLine()) scan.nextLine();
+        //     // Consume \n after spent input 
+        //     if(scan.hasNextLine()) scan.nextLine();
 
-            String limitString = String.format("$%.2f", limit);
-            String spentString = String.format("$%.2f", spent);
-            System.out.println("The budget limit for " + category + " was: " + limitString + 
-                               " but the actual spend was " + spentString);
-        }
+        //     String limitString = String.format("$%.2f", limit);
+        //     String spentString = String.format("$%.2f", spent);
+        //     System.out.println("The budget limit for " + category + " was: " + limitString + 
+        //                        " but the actual spend was " + spentString);
+        //}
     }
 
     /**

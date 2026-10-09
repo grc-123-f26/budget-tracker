@@ -13,7 +13,7 @@ public class BudgetCategory {
 
     public String toString()
     {
-        return category + "was : $" + maxBudgetValue + " but thge actual spend was $" + actualBudgetValue + "\n";
+        return category + " was: $" + maxBudgetValue + " but the actual spend was: $" + actualBudgetValue + "\n";
     }
 
     public String getCategory() {
