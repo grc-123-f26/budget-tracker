@@ -15,12 +15,13 @@ public class BudgetApp {
             double limit = scan.nextDouble();
             double spent = scan.nextDouble();
 
+            categories.add(new BudgetCategory(category, limit, spent));
             // Consume \n after spent input 
             if(scan.hasNextLine()) scan.nextLine();
-            String limitString = String.format("$%.2f", limit);
-            String spentString = String.format("$%.2f", spent);
-            System.out.println("The budget limit for " + category + " was: " + limitString + 
-                               " but the actual spend was " + spentString);
+            // String limitString = String.format("$%.2f", limit);
+            // String spentString = String.format("$%.2f", spent);
+            // System.out.println("The budget limit for " + category + " was: " + limitString + 
+            //                    " but the actual spend was " + spentString);
        }
        System.out.println(categories);
      }
