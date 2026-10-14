@@ -25,6 +25,9 @@ public class BudgetApp {
        System.out.println(categories);
 
        System.out.println("Budget difference: $" + (double)budgetDifference(categories));
+    
+       System.out.printf("Average difference of all categories: $%.2f%n", averageDifference(categories));
+
      }
 
     /**
@@ -50,4 +53,10 @@ public class BudgetApp {
         // It should instead return the value.
         return totalDifference;
     }
+
+    public static double averageDifference(List<BudgetCategory> categories) {
+        return (double) budgetDifference(categories) / categories.size();
+    }
+
+
 }

@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class BudgetCategory implements Comparable<BudgetCategory> {
     private String category;
     private double limit;
@@ -22,7 +24,7 @@ public class BudgetCategory implements Comparable<BudgetCategory> {
     }
     public void setCategory(String category) {
         this.category = category;
-    }
+    } 
 
     public void setLimit(double limit) {
         this.limit = limit;
