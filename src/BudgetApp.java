@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.*;
 
 public class BudgetApp {
@@ -23,8 +21,10 @@ public class BudgetApp {
             // System.out.println("The budget limit for " + category + " was: " + limitString + 
             //                    " but the actual spend was " + spentString);
        }
-       Collections.sort(categories);
+       Collections.sort(categories, Collections.reverseOrder());
        System.out.println(categories);
+
+       System.out.println("Budget difference: $" + (double)budgetDifference(categories));
      }
 
     /**
@@ -42,7 +42,12 @@ public class BudgetApp {
     public static int budgetDifference(List<BudgetCategory> categories) {
         // TODO: You will implement this method in Wave 4
         // Note that this method SHOULD NOT have a print statement.
+        int totalDifference = 0;
+        for(int i = 0; i < categories.size(); i++) {
+            BudgetCategory category = categories.get(i);
+            totalDifference += (category.getSpent() - category.getLimit());
+        }
         // It should instead return the value.
-        return -1;
+        return totalDifference;
     }
 }
