@@ -36,6 +36,7 @@ public class BudgetApp {
         // System.out.println(finalStatement);
        
         System.out.println(sortedDifferenceofBudgets);
+        System.out.println(budgetDifference(sortedDifferenceofBudgets));
     }
 
     /**
