@@ -1,6 +1,8 @@
 import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 
 public class BudgetApp {
@@ -29,7 +31,11 @@ public class BudgetApp {
             sortedDifferenceofBudgets.add(newCategory);
             finalStatement += (newCategory);
         }
-        System.out.println(finalStatement);
+        Collections.sort(sortedDifferenceofBudgets, Comparator.reverseOrder());
+        
+        // System.out.println(finalStatement);
+       
+        System.out.println(sortedDifferenceofBudgets);
     }
 
     /**
