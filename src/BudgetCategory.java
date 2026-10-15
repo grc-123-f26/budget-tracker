@@ -1,4 +1,4 @@
-public class BudgetCategory {
+public class BudgetCategory implements Comparable<BudgetCategory> {
     
     private String category = "";
     private double maxBudgetValue = 0;
@@ -40,5 +40,20 @@ public class BudgetCategory {
         this.actualBudgetValue = actualBudgetValue;
     }
     
+    public int compareTo(BudgetCategory other)
+    {
+        double firstCompare = this.actualBudgetValue - this.maxBudgetValue;
+        double secondCompare = other.actualBudgetValue - other.maxBudgetValue;
+        if (firstCompare < secondCompare)
+        {
+            return -1;
+        }
+        if (firstCompare == secondCompare)
+        {
+            return 0;
+        }
+        return 1;
+    }
+
 
 }

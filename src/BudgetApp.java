@@ -1,5 +1,7 @@
 import java.util.List;
 import java.util.Scanner;
+import java.util.ArrayList;
+
 
 public class BudgetApp {
     public static void main(String[] args) {
@@ -7,6 +9,7 @@ public class BudgetApp {
         //BudgetCategory rent = new BudgetCategory("Rent", 2050.00, 2050.00);
         //System.out.print(rent);
         String finalStatement = "";
+        List<BudgetCategory> sortedDifferenceofBudgets = new ArrayList<>();
 
          while(scan.hasNextLine()) {
             String category = scan.nextLine();
@@ -23,10 +26,10 @@ public class BudgetApp {
             }
 
             BudgetCategory newCategory = new BudgetCategory(category, limit, spent);
+            sortedDifferenceofBudgets.add(newCategory);
             finalStatement += (newCategory);
-             
         }
-        System.out.print(finalStatement);
+        System.out.println(finalStatement);
     }
 
     /**
@@ -45,8 +48,8 @@ public class BudgetApp {
         // TODO: You will implement this method in Wave 4
         // Note that this method SHOULD NOT have a print statement.
         // It should instead return the value.
-
         
+
         return -1;
     }
 }
