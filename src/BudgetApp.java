@@ -54,8 +54,15 @@ public class BudgetApp {
         // TODO: You will implement this method in Wave 4
         // Note that this method SHOULD NOT have a print statement.
         // It should instead return the value.
-        
+        double budgetSum = 0.0;
+        double budgetSumTotal = 0.0;
+        for (int i = 0; i < categories.size(); i++)
+        {
+            budgetSum += categories.get(i).getActualBudgetValue();
+            budgetSumTotal += categories.get(i).getMaxBudgetValue();
 
-        return -1;
+        }
+
+        return (int) Math.round(budgetSum - budgetSumTotal);
     }
 }
