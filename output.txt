@@ -1,0 +1,10 @@
+[Dining Out was: $120.0 but the actual spend was: $185.0
+, Entertainment was: $80.0 but the actual spend was: $115.0
+, Utilities was: $150.0 but the actual spend was: $165.0
+, Rent was: $1350.0 but the actual spend was: $1350.0
+, Transportation was: $200.0 but the actual spend was: $190.0
+, Groceries was: $400.0 but the actual spend was: $375.0
+]
+80
+Out of 6 Categories. You have and under average of 282.5 and an over average of 155.0.
+
