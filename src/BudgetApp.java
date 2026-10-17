@@ -71,12 +71,15 @@ public class BudgetApp {
     public static String overUnderAverage(List<BudgetCategory> categories)
     {
         double under = 0.0;
+        double underCount = 0.0;
         double over = 0.0;
+        double overCount = 0.0;
         for(int i = 0; i < categories.size(); i++)
         {
             if(categories.get(i).getActualBudgetValue() < categories.get(i).getMaxBudgetValue())
             {
                 under += categories.get(i).getActualBudgetValue();
+                underCount++;
             }
             else if(categories.get(i).getActualBudgetValue() == categories.get(i).getMaxBudgetValue())
             {
@@ -85,9 +88,10 @@ public class BudgetApp {
             else
             {
                 over += categories.get(i).getActualBudgetValue();
+                overCount++;
             }
         }
 
-        return "Out of " + categories.size() + " Categories. " + "You have and under average of " + (under / categories.size()) + " and an over of " + (over / categories.size()) + ".\n";
+        return "Out of " + categories.size() + " Categories. " + "You have and under average of " + (under / underCount) + " and an over average of " + (over / overCount) + ".\n";
     }
 }
