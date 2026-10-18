@@ -1,0 +1,5 @@
+least to most overspent: 
+[for: Groceriesthe budget was: 400.0 , the amount spent was 375.0, for: Transportationthe budget was: 200.0 , the amount spent was 190.0, for: Rentthe budget was: 1350.0 , the amount spent was 1350.0, for: Utilitiesthe budget was: 150.0 , the amount spent was 165.0, for: Entertainmentthe budget was: 80.0 , the amount spent was 115.0, for: Dining Outthe budget was: 120.0 , the amount spent was 185.0]
+most to least overspent: 
+[for: Dining Outthe budget was: 120.0 , the amount spent was 185.0, for: Entertainmentthe budget was: 80.0 , the amount spent was 115.0, for: Utilitiesthe budget was: 150.0 , the amount spent was 165.0, for: Rentthe budget was: 1350.0 , the amount spent was 1350.0, for: Transportationthe budget was: 200.0 , the amount spent was 190.0, for: Groceriesthe budget was: 400.0 , the amount spent was 375.0]
+total over/under budget: 80.0
