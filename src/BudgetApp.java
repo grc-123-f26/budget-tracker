@@ -1,23 +1,48 @@
 import java.util.List;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class BudgetApp {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // BudgetCategory groceries = new BudgetCategory("Groceries", 500, 401);
+        // System.out.println(groceries);
+        // System.out.println(groceries.getCategory());
+        // System.out.println(groceries.getLimit());
+        // System.out.println(groceries.getSpent());
+
+        List<BudgetCategory> list = new ArrayList<>();
+
         while(scan.hasNextLine()) {
             String category = scan.nextLine();
-
             double limit = scan.nextDouble();
             double spent = scan.nextDouble();
 
             // Consume \n after spent input 
             if(scan.hasNextLine()) scan.nextLine();
 
-            String limitString = String.format("$%.2f", limit);
-            String spentString = String.format("$%.2f", spent);
-            System.out.println("The budget limit for " + category + " was: " + limitString + 
-                               " but the actual spend was " + spentString);
+            BudgetCategory categories = new BudgetCategory(category, limit, spent);
+            list.add(categories);
+        }
+
+        Collections.sort(list, Collections.reverseOrder());
+        System.out.println("The categories sorted from most spent to least is:");
+        for(int i = 0; i < list.size(); i++)
+        {
+            System.out.println(list.get(i));
+        }
+
+        System.out.println(list);
+    
+        int diff = budgetDifference(list);
+        System.out.println("Budget Difference: $" + diff);
+
+        if(list.size() > 0)
+        {
+            double average = diff / list.size();
+            System.out.println("Average difference for each category: $" + String.format("%.2f", average));
         }
     }
 
@@ -34,9 +59,12 @@ public class BudgetApp {
      * @return the total amount over/under budget
      */
     public static int budgetDifference(List<BudgetCategory> categories) {
-        // TODO: You will implement this method in Wave 4
-        // Note that this method SHOULD NOT have a print statement.
-        // It should instead return the value.
-        return -1;
+        int total = 0;
+        for(int i = 0; i < categories.size(); i++)
+        {
+            total = total + (int) categories.get(i).difference();
+        }
+
+        return total;
     }
 }
