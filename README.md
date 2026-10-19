@@ -3,6 +3,7 @@
 Please fork and clone this repository. Remember to fork before you clone. MAKE COMMITS AS YOU WORK!
 
 ## Wave 0: Understand
+
 Take a bit of time to read through BudgetApp.java and sampleSpending.txt. Make a prediction of what the output will be when you run it. Then run the below command (make sure you are in the budget-tracker directory):
 
 ```
@@ -50,15 +51,16 @@ Make sure to add, commit and push your code! You may end up making multiple comm
 ## Wave 5: Your choice!
 
 Add at least one piece of new functionality of your choosing! Some options might consider:
+
 - Calculate the average over/under budget across all categories
 - Calculate the percentage over/under budgets
 - Handle multiple months
 - Create an ASCII bar chart showing the relative spend on your budget, for example:
-    ```
-    Rent:          | **********
-    Entertainment: | *****
-    Food:          | **
-    ```
+  ```
+  Rent:          | **********
+  Entertainment: | *****
+  Food:          | **
+  ```
 - Anything else you think might be interesting to add!
 
 Make sure to add commit and push. You may end up making multiple commits over the course of this wave
@@ -73,9 +75,10 @@ javac src/*.java && java -cp src BudgetApp < sampleSpending.txt > output.txt
 
 When running this command you will not see any output in the terminal. Instead, it will be saved to `output.txt`. Add, commit, and push this output file.
 
-## Optional Wave 7: Your Finances 
+## Optional Wave 7: Your Finances
 
 You do not need to turn anything in or commit anything for this wave. It's just for your own financial health! Consider breaking your real-life expenses into categories. Make a predicition of how much you spend on them each month. Then, go over your spending (bank account statements, credit card statements, etc.) and add up what you actually spent. See how close or far off your estimates were. You can plug your data into your code and see it summarized! But be careful not to commit your actual data if you don't want it publicly posted.
 
 ## Sumbitting
+
 Make a PR and copy the link to Canvas to submit.
