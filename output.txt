@@ -1,0 +1,3 @@
+[Dining Out :limit $120.00, spent $185.00, Entertainment :limit $80.00, spent $115.00, Utilities :limit $150.00, spent $165.00, Rent :limit $1350.00, spent $1350.00, Transportation :limit $200.00, spent $190.00, Groceries :limit $400.00, spent $375.00]
+Total under/over budget: 80
+Average under/over: 13.333333333333334

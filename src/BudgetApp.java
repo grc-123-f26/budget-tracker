@@ -1,9 +1,18 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
 public class BudgetApp {
     public static void main(String[] args) {
+        //BudgetCategory groceries = new BudgetCategory("Groceries", 500, 401);
+        //System.out.println(groceries.getName());
+        //System.out.println(groceries.getLimit());
+        //System.out.println(groceries.getSpent());
+        //System.out.println(groceries);
+    
         Scanner scan = new Scanner(System.in);
+        List<BudgetCategory> categories = new ArrayList<>();
 
         while(scan.hasNextLine()) {
             String category = scan.nextLine();
@@ -11,16 +20,19 @@ public class BudgetApp {
             double limit = scan.nextDouble();
             double spent = scan.nextDouble();
 
-            // Consume \n after spent input 
+            // Consume \n after spent input
             if(scan.hasNextLine()) scan.nextLine();
 
-            String limitString = String.format("$%.2f", limit);
-            String spentString = String.format("$%.2f", spent);
-            System.out.println("The budget limit for " + category + " was: " + limitString + 
-                               " but the actual spend was " + spentString);
+            categories.add(new BudgetCategory(category, limit, spent));
         }
-    }
 
+        Collections.sort(categories, Collections.reverseOrder());
+        System.out.println(categories);
+
+        int difference = budgetDifference(categories);
+        System.out.println("Total under/over budget: " + difference);
+        System.out.println("Average under/over: " + avgUnderOver(categories));
+    }
     /**
      * Returns overall how much over/under budget a person is given a list of their
      * categories.
@@ -33,10 +45,19 @@ public class BudgetApp {
      * @param categories the budget categories with the spend
      * @return the total amount over/under budget
      */
+
     public static int budgetDifference(List<BudgetCategory> categories) {
         // TODO: You will implement this method in Wave 4
         // Note that this method SHOULD NOT have a print statement.
         // It should instead return the value.
-        return -1;
+        double total = 0;
+        for(BudgetCategory category : categories){
+            total = total + category.getUnderOver();
+        }
+        return (int) total;
+    }
+
+    public static double avgUnderOver(List<BudgetCategory> categories){
+        return budgetDifference(categories) / (double) categories.size();
     }
 }
