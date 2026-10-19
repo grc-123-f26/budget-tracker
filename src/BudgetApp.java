@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,33 +11,44 @@ public class BudgetApp {
 
         // System.out.println("Limit = " + groceries.getLimit());
         
-        Scanner scan = new Scanner(System.in);
+        // Scanner scan = new Scanner(System.in);
 
-        while(scan.hasNextLine()) {
-            String category = scan.nextLine();
+        // while(scan.hasNextLine()) {
+            // String category = scan.nextLine();
 
-            double limit = scan.nextDouble();
-            double spent = scan.nextDouble();
+            // double limit = scan.nextDouble();
+            // double spent = scan.nextDouble();
 
             // Consume \n after spent input 
-            if(scan.hasNextLine()) scan.nextLine();
+            // if(scan.hasNextLine()) scan.nextLine();
 
-            List<BudgetCategory> catagories = new ArrayList<>();
+           
 
-            String limitString = String.format("$%.2f", limit);
-            String spentString = String.format("$%.2f", spent);
+            // String limitString = String.format("$%.2f", limit);
+            // String spentString = String.format("$%.2f", spent);
+
+            
+            
+
+        // }
+
+        List<BudgetCategory> catagories = new ArrayList<>();
 
             BudgetCategory groceries = new BudgetCategory("Groceries", 500, 401);
             BudgetCategory entertainment = new BudgetCategory("entertainments", 10, 5);
             BudgetCategory pokemonCards = new BudgetCategory("pokemonCards", 100, 600);
             BudgetCategory paperclips = new BudgetCategory("paperclips", 2, 10000);
         
-            catagories.add(0, groceries);
-            catagories.add(1, entertainment);
-            catagories.add(2, pokemonCards);
-            catagories.add(3, paperclips);
+            catagories.add(groceries);
+            catagories.add(entertainment);
+            catagories.add(pokemonCards);
+            catagories.add(paperclips);
 
-        }
+            catagories.sort(null);
+
+            for (int i = 0; i <catagories.size(); i++) {
+                System.out.println(catagories.get(i));
+            }
 
         
     }
