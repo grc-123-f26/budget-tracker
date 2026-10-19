@@ -1,0 +1,59 @@
+RENT
+Limit: 1350.0
+Spending: 1350.0
+
+GROCERIES
+Limit: 400.0
+Spending: 375.0
+
+DINING OUT
+Limit: 120.0
+Spending: 185.0
+
+TRANSPORTATION
+Limit: 200.0
+Spending: 190.0
+
+ENTERTAINMENT
+Limit: 80.0
+Spending: 115.0
+
+UTILITIES
+Limit: 150.0
+Spending: 165.0
+
+*** How much over or under the budget is for a particular category - REVERSE ORDER ***
+DINING OUT
+Limit: 120.0
+Spending: 185.0
+
+ENTERTAINMENT
+Limit: 80.0
+Spending: 115.0
+
+UTILITIES
+Limit: 150.0
+Spending: 165.0
+
+RENT
+Limit: 1350.0
+Spending: 1350.0
+
+TRANSPORTATION
+Limit: 200.0
+Spending: 190.0
+
+GROCERIES
+Limit: 400.0
+Spending: 375.0
+
+Budget difference: -80
+
+*** Overall % Budget Used for Each Category ***
+DINING OUT: 154.17%
+ENTERTAINMENT: 143.75%
+UTILITIES: 110.00%
+RENT: 100.00%
+TRANSPORTATION: 95.00%
+GROCERIES: 93.75%
+
