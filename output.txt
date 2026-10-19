@@ -1,0 +1,14 @@
+[Rent: limit $1350.00, spent $1350.00 (+$0.00), Groceries: limit $400.00, spent $375.00 (-$25.00), Dining Out: limit $120.00, spent $185.00 (+$65.00), Transportation: limit $200.00, spent $190.00 (-$10.00), Entertainment: limit $80.00, spent $115.00 (+$35.00), Utilities: limit $150.00, spent $165.00 (+$15.00)]
+
+Sorted from most overspent to least:
+[Dining Out: limit $120.00, spent $185.00 (+$65.00), Entertainment: limit $80.00, spent $115.00 (+$35.00), Utilities: limit $150.00, spent $165.00 (+$15.00), Rent: limit $1350.00, spent $1350.00 (+$0.00), Transportation: limit $200.00, spent $190.00 (-$10.00), Groceries: limit $400.00, spent $375.00 (-$25.00)]
+
+Total over/under budget: 80
+
+Spending chart (each * = $50):
+Dining Out:     | ****
+Entertainment:  | **
+Utilities:      | ***
+Rent:           | ***************************
+Transportation: | ****
+Groceries:      | ********

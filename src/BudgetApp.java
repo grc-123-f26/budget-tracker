@@ -1,9 +1,20 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class BudgetApp {
     public static void main(String[] args) {
+
+        // BudgetCategory groceries = new BudgetCategory("Groceries", 500, 401);
+        // System.out.println(groceries.getName());
+        // System.out.println(groceries.getLimit());
+        // System.out.println(groceries.getSpent());
+        // System.out.println(groceries);
+   
+   
         Scanner scan = new Scanner(System.in);
+        List<BudgetCategory> categories = new ArrayList<>();
 
         while(scan.hasNextLine()) {
             String category = scan.nextLine();
@@ -14,11 +25,24 @@ public class BudgetApp {
             // Consume \n after spent input 
             if(scan.hasNextLine()) scan.nextLine();
 
-            String limitString = String.format("$%.2f", limit);
-            String spentString = String.format("$%.2f", spent);
-            System.out.println("The budget limit for " + category + " was: " + limitString + 
-                               " but the actual spend was " + spentString);
+            categories.add(new BudgetCategory(category, limit, spent));
         }
+
+        System.out.println(categories);
+
+        Collections.sort(categories, Collections.reverseOrder());
+
+        System.out.println();
+        System.out.println("Sorted from most overspent to least:");
+        System.out.println(categories);
+
+        int difference = budgetDifference(categories);
+        System.out.println();
+        System.out.println("Total over/under budget: " + difference);
+
+        System.out.println();
+        System.out.println("Spending chart (each * = $50):");
+        printBarChart(categories);
     }
 
     /**
@@ -34,9 +58,24 @@ public class BudgetApp {
      * @return the total amount over/under budget
      */
     public static int budgetDifference(List<BudgetCategory> categories) {
-        // TODO: You will implement this method in Wave 4
-        // Note that this method SHOULD NOT have a print statement.
-        // It should instead return the value.
-        return -1;
+        double total = 0;
+        for (BudgetCategory category : categories) {
+            total += category.getDifference();
+        }
+        return (int) Math.round(total);
+    }
+
+    public static void printBarChart(List<BudgetCategory> categories){
+        int longestName = 0;
+        for (BudgetCategory category : categories){
+            longestName = Math.max(longestName, category.getName().length());
+        }
+
+        for (BudgetCategory category : categories) {
+            int stars = (int) Math.round(category.getSpent() / 50);
+            String label = String.format("%-" + (longestName + 1) + "s", category.getName() + ":");
+            System.out.println(label + " | " + "*".repeat(stars));
+
+      }
     }
 }
