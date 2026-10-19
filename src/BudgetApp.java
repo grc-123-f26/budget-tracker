@@ -1,30 +1,42 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class BudgetApp {
     public static void main(String[] args) {
 
-        BudgetCategory groceries = new BudgetCategory("Groceries", 500, 401);
-        System.out.println(groceries);
+        // BudgetCategory groceries = new BudgetCategory("Groceries", 500, 401);
+        // System.out.println(groceries);
 
-        System.out.println("Limit = " + groceries.getLimit());
+        // System.out.println("Limit = " + groceries.getLimit());
         
-        // Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-        // while(scan.hasNextLine()) {
-        //     String category = scan.nextLine();
+        while(scan.hasNextLine()) {
+            String category = scan.nextLine();
 
-        //     double limit = scan.nextDouble();
-        //     double spent = scan.nextDouble();
+            double limit = scan.nextDouble();
+            double spent = scan.nextDouble();
 
-        //     // Consume \n after spent input 
-        //     if(scan.hasNextLine()) scan.nextLine();
+            // Consume \n after spent input 
+            if(scan.hasNextLine()) scan.nextLine();
 
-        //     String limitString = String.format("$%.2f", limit);
-        //     String spentString = String.format("$%.2f", spent);
-        //     System.out.println("The budget limit for " + category + " was: " + limitString + 
-        //                        " but the actual spend was " + spentString);
-        // }
+            List<BudgetCategory> catagories = new ArrayList<>();
+
+            String limitString = String.format("$%.2f", limit);
+            String spentString = String.format("$%.2f", spent);
+
+            BudgetCategory groceries = new BudgetCategory("Groceries", 500, 401);
+            BudgetCategory entertainment = new BudgetCategory("entertainments", 10, 5);
+            BudgetCategory pokemonCards = new BudgetCategory("pokemonCards", 100, 600);
+            BudgetCategory paperclips = new BudgetCategory("paperclips", 2, 10000);
+        
+            catagories.add(0, groceries);
+            catagories.add(1, entertainment);
+            catagories.add(2, pokemonCards);
+            catagories.add(3, paperclips);
+
+        }
 
         
     }
