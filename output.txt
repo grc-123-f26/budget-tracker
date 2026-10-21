@@ -1,0 +1,6 @@
+[The budget limit for entertainments was: $10 but the actual spend was $10, The budget limit for Groceries was: $500 but the actual spend was $499, The budget limit for paperclips was: $2 but the actual spend was $0, The budget limit for pokemonCards was: $100 but the actual spend was $20]
+The budget limit for entertainments was: $10 but the actual spend was $10
+The budget limit for Groceries was: $500 but the actual spend was $499
+The budget limit for paperclips was: $2 but the actual spend was $0
+The budget limit for pokemonCards was: $100 but the actual spend was $20
+Looks like you have an extra 83$ This month. Good job! Treat yourself by spending some extra on pokemonCards
