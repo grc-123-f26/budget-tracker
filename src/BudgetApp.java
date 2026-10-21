@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class BudgetApp {
     public static void main(String[] args) {
@@ -44,7 +44,9 @@ public class BudgetApp {
             catagories.add(pokemonCards);
             catagories.add(paperclips);
 
-            catagories.sort(Comparator.reverseOrder());
+            catagories.sort(null);
+
+            System.out.println(catagories);
 
             for (int i = 0; i <catagories.size(); i++) {
                 System.out.println(catagories.get(i));
@@ -70,7 +72,7 @@ public class BudgetApp {
     public static int budgetDifference(List<BudgetCategory> categories) {
         int difference = 0;
         for (int i = 0; i < categories.size(); i++) {
-            int holder = categories.get(i).getLimit() - categories.get(i).getSpent();
+            int holder = categories.get(i).getSpent() - categories.get(i).getLimit();
             difference += holder;
             
         }

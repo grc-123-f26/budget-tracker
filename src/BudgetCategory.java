@@ -27,7 +27,7 @@ public class BudgetCategory implements Comparable<BudgetCategory>{
 
     public int compareTo(BudgetCategory other){
         int cat1 = this.getLimit() - this.getSpent();
-        int cat2 = getLimit() - getSpent();
+        int cat2 = other.getLimit() - other.getSpent();
         return Integer.compare(cat1, cat2);
 
     }
